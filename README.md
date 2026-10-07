@@ -78,14 +78,16 @@ Klicke auf einen beliebigen Ort der Weltkarte und Badbar sagt dir sofort, ob dor
 src/app/
 ├── components/
 ├── pages/
-│   ├── start/
+│   ├── home/
 │   ├── badewetter/
-│   ├── angebote/
-│   ├── galerie/
+│   ├── badetipps/
+│   ├── community-images/
 │   ├── kontakt/
 │   └── impressum/
 ├── services/
 │   └── wetter.service.ts   # API-Abrufe (Open-Meteo)
+├── stores/
+│   └── wetter.store.ts   # Damit die Daten über mehrere Komponente verfügar sind
 ├── app.routes.ts
 └── app.component.ts
 ```
