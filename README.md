@@ -44,7 +44,7 @@ Klicke auf einen beliebigen Ort der Weltkarte und Badbar sagt dir sofort, ob dor
 
 ---
 
-## 🛠️ Technik
+## Technik
 
 | Bereich | Verwendet |
 |---|---|
@@ -63,12 +63,12 @@ Klicke auf einen beliebigen Ort der Weltkarte und Badbar sagt dir sofort, ob dor
 
 ## Design
 
-| Farbe | Hex | Bedeutung |
-|---|---|---|
-| Seeblau | `#1E88C8` | Wasser, Frische |
-| Sand | `#F2E3C6` | Strand, Wärme |
-| Koralle | `#FF6B57` | Sommerenergie, Buttons |
-| Weiss | `#FFFFFF` | Klarheit, Luft |
+| Farbe | Vorschau | Hex | Bedeutung |
+|---|---|---|---|
+| Seeblau | ![#1E88C8](https://img.shields.io/badge/-%20%20%20%20%20%20%20%20-1E88C8?style=flat-square) | `#1E88C8` | Wasser, Frische |
+| Sand | ![#F2E3C6](https://img.shields.io/badge/-%20%20%20%20%20%20%20%20-F2E3C6?style=flat-square) | `#F2E3C6` | Strand, Wärme |
+| Koralle | ![#FF6B57](https://img.shields.io/badge/-%20%20%20%20%20%20%20%20-FF6B57?style=flat-square) | `#FF6B57` | Sommerenergie, Buttons |
+| Weiss | ![#FFFFFF](https://img.shields.io/badge/-%20%20%20%20%20%20%20%20-FFFFFF?style=flat-square) | `#FFFFFF` | Klarheit, Luft |
 
 ---
 
