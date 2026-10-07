@@ -13,7 +13,7 @@ Klicke auf einen beliebigen Ort der Weltkarte und Badbar sagt dir sofort, ob dor
 
 ---
 
-**BadBar Link:** [HIER LINK ZUR SCHULSERVER-SEITE EINTRAGEN](https://example.com)
+**BadBar Link:** [BadBar](https://inf-293-25g-25g293user4.iet-gibb.net/Teil3/badbar)
 
 ---
 
