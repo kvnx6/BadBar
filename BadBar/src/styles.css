@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
+  --color-seeblau: #1E88C8;
+  --color-sand: #F2E3C6;
+  --color-koralle: #FF6B57;
+  --color-weiss: #FFFFFF;
+  --color-black: #000000;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6,
+nav,
+.menu {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}

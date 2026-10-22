@@ -1,0 +1,132 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background: #fff;
+}
+
+.logoConatiner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.75rem;
+  align-items: center;
+}
+
+.logoConatiner img {
+  grid-row: 1 / 3;
+}
+
+.logoConatiner h3 {
+  margin: 0;
+  align-self: end;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.logoConatiner p {
+  margin: 0;
+  align-self: start;
+  font-size: 1rem;
+}
+
+.navContainer nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navContainer nav a {
+  color: var(--color-black);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.navContainer nav a:hover {
+  color: var(--color-seeblau);
+}
+
+.menuToggle {
+  display: none;
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-wrap: wrap;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .burger {
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .burger span,
+  .burger span::before,
+  .burger span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+    transition: transform 0.25s ease, top 0.25s ease, background 0.2s ease;
+  }
+
+  .burger span {
+    top: 8.5px;
+  }
+
+  .burger span::before {
+    top: -8px;
+  }
+
+  .burger span::after {
+    top: 8px;
+  }
+
+  .navContainer {
+    display: none;
+    flex-basis: 100%;
+  }
+
+  .navContainer ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.25rem 0 0.5rem;
+  }
+
+  .menuToggle:checked ~ .navContainer {
+    display: block;
+  }
+
+  .menuToggle:checked ~ .burger span {
+    background: transparent;
+  }
+
+  .menuToggle:checked ~ .burger span::before {
+    top: 0;
+    transform: rotate(45deg);
+    background: #000;
+  }
+
+  .menuToggle:checked ~ .burger span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    background: #000;
+  }
+}
