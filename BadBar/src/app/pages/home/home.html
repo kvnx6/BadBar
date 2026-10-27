@@ -18,6 +18,68 @@
       </div>
     </div>
   </article>
+  <article class="tutorialContainer" id="tutorial">
+    <h1>Tutorial</h1>
+    <div class="steps" role="radiogroup">
+      <label>
+        <input
+          type="radio"
+          name="stepOne"
+          [value]="1"
+          required
+          (change)="step.set(1)"
+          [checked]="step() === 1"
+        />
+        <span>1. Schritt</span>
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="stepTwo"
+          [value]="2"
+          required
+          (change)="step.set(2)"
+          [checked]="step() === 2"
+        />
+        <span>2. Schritt</span>
+      </label>
+    </div>
+    @if (step() === 1) {
+      <div class="dataContainer">
+        <img
+          class="mapImage"
+          style="max-width: 100%; height: auto; border-radius: 16px;"
+          src="map_select_step1.svg"
+          alt="tutorialMap"
+        >
+        <p>
+          Zoome in die Karte und tippe auf die Stelle, wo du heute baden möchtest. Je näher du heranzoomst, desto genauer
+          ist dein Punkt: Mit zwei Fingern (oder dem Mausrad) vergrösserst du den Ausschnitt, mit Ziehen verschiebst du die
+          Karte. BadBar ermittelt sofort das aktuelle Badewetter für genau diesen Punkt, damit du weisst, ob sich der Sprung
+          ins Wasser lohnt. Du siehst auf einen Blick Wetter, Wind und Temperatur und kannst so spontan entscheiden, ob du an
+          den See, an den Fluss oder lieber zu Hause bleibst.
+        </p>
+      </div>
+    }
+    @else if (step() === 2) {
+      <div class="dataContainer">
+        <img
+          class="dataImage"
+          style="max-width: 100%; height: auto; border-radius: 16px;"
+          src="table.svg"
+          alt="tutorialTable"
+        >
+        <p>
+          Nachdem du geklickt hast solltest du jetzt auf Desktop neben dran und auch Mobile unten dran ein Resultat sehen und zwar gibts hier ein paar wichtige sachen
+          Badeampel: es gibt 3 farben grün, gelb, rot wie eine normale ampel beduetet grün Badbar gelb ist mit eigenes risiko und rot ist empfohlen nicht badbar
+          Man sieht oberhalb der tabelle Name der Ort und die Kordinaten
+          Die Tabelle hat alle wichtige daten wie wassertemperatur bei Meeren lufttemperaturn etc mit bewertung
+          und anhand von diesen Parameter kannst du dann selbst bestimmen ob du Baden willst
+        </p>
+      </div>
+    }
+  </article>
+  <article class="popularPicksContainer">
 
-
+  </article>
 </section>

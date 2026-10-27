@@ -71,6 +71,44 @@
   cursor: pointer;
 }
 
+.steps {
+  display: inline-flex;
+  gap: 4px;
+  padding: 6px;
+  background: #eef1f6;
+  border-radius: 999px;
+}
+
+.steps label {
+  cursor: pointer;
+}
+
+.steps input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.steps span {
+  display: block;
+  padding: 10px 22px;
+  border-radius: 999px;
+  color: var(--color-black);
+}
+
+.steps input:checked + span {
+  background: var(--color-weiss);
+  color: var(--color-seeblau);
+  font-weight: 600;
+}
+
+.dataContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 6px;
+}
+
 @media (max-width: 600px) {
   .textContainer {
     max-width: 100%;
