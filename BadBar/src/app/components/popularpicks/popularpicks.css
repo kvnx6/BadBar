@@ -1,0 +1,32 @@
+.popularPick {
+  width: 240px;
+  padding: 8px 8px 16px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.placeImg {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+.popularPick h3 {
+  margin: 12px 8px 2px;
+  font-size: 1.4rem;
+}
+
+.popularPick p {
+  margin: 0 8px 12px;
+  color: var(--color-black);
+}
+
+.popularPick a {
+  margin: 0 8px;
+  font-weight: 600;
+  color: var(--color-koralle);
+  text-decoration: none;
+}
