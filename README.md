@@ -86,8 +86,6 @@ src/app/
 │   └── impressum/
 ├── services/
 │   └── wetter.service.ts   # API-Abrufe (Open-Meteo)
-├── stores/
-│   └── wetter.store.ts   # Damit die Daten über mehrere Komponente verfügar sind
 ├── app.routes.ts
 └── app.component.ts
 ```
