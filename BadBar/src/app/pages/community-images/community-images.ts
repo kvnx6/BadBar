@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ReactiveFormsModule, ValidationErrors, Validators, } from '@angular/forms';
-import { CommunityImage } from '../../modules/community-image';
+import { CommunityImage } from '../../models/community-image';
 
 @Component({
   imports: [ReactiveFormsModule],

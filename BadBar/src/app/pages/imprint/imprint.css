@@ -1,0 +1,94 @@
+.impressum {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #1f2933;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #52606d;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back:hover {
+  color: #1f2933;
+  text-decoration: underline;
+}
+
+h1 {
+  margin: 0 0 1.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+section {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #e4e7eb;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #323f4b;
+}
+
+p {
+  margin: 0 0 0.5rem;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  color: var(--color-seeblau);
+}
+
+.updated {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #7b8794;
+}
+
+@media (prefers-color-scheme: dark) {
+  .impressum {
+    color: #e4e7eb;
+  }
+
+  .back,
+  .updated {
+    color: #9aa5b1;
+  }
+
+  .back:hover {
+    color: #f5f7fa;
+  }
+
+  h2 {
+    color: #cbd2d9;
+  }
+
+  section {
+    border-bottom-color: #3e4c59;
+  }
+
+  a {
+    color: var(--color-seeblau);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}

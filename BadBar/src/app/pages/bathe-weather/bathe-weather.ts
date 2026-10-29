@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { WeatherService } from '../../services/weather.service';
 
 @Component({
   imports: [],
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './bathe-weather.css',
   templateUrl: './bathe-weather.html',
 })
-export class BatheWeather {}
+export class BatheWeather {
+  protected weatherService = inject(WeatherService);
+}
