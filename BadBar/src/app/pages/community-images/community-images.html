@@ -1,1 +1,54 @@
-<p>community-images works!</p>
+<section class="community">
+  <h1>Community Bilder</h1>
+
+  <div class="slider">
+    <div class="track" [style.transform]="'translateX(-' + current() * 100 + '%)'">
+      @for (img of images(); track img.src) {
+        <figure class="slide">
+          <img [src]="img.src" [alt]="img.place" />
+          <figcaption>{{ img.place }} · von {{ img.author }}</figcaption>
+        </figure>
+      }
+    </div>
+
+    <button class="nav prev" type="button" (click)="prev()" aria-label="Vorheriges Bild">‹</button>
+    <button class="nav next" type="button" (click)="next()" aria-label="Nächstes Bild">›</button>
+  </div>
+
+  <h2>Teile dein Badebild</h2>
+  <form class="uploadForm" [formGroup]="form" (submit)="onSubmit(fileInput)" novalidate>
+    <label>
+      Name
+      <input type="text" formControlName="author" placeholder="Dein Name" />
+      @if (form.controls.author.touched && form.controls.author.invalid) {
+        <small class="error">Bitte gib deinen Namen ein mind. 2 Zeichen.</small>
+      }
+    </label>
+
+    <label>
+      Ort
+      <input type="text" formControlName="place" placeholder="z. B. Thunersee" />
+      @if (form.controls.place.touched && form.controls.place.invalid) {
+        <small class="error">Bitte gib einen Ort an.</small>
+      }
+    </label>
+
+    <label>
+      Bild
+      <input #fileInput type="file" accept="image/*" (change)="onFileChange($event)" />
+      @if (form.controls.image.touched && form.controls.image.errors; as e) {
+        @if (e['required']) { <small class="error">Bitte wähle ein Bild aus.</small> }
+        @if (e['notImage']) { <small class="error">Die Datei ist kein Bild.</small> }
+        @if (e['tooBig']) { <small class="error">Das Bild darf maximal 5 MB gross sein.</small> }
+      }
+    </label>
+
+    <button type="submit" class="btn" [disabled]="uploading()">
+      {{ uploading() ? 'Wird hochgeladen…' : 'Hochladen' }}
+    </button>
+
+    @if (success()) {
+      <p class="successMsg">Danke! Dein Bild wurde zur Galerie hinzugefügt.</p>
+    }
+  </form>
+</section>
