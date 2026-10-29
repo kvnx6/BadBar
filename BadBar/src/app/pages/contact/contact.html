@@ -1,1 +1,54 @@
-<p>contact works!</p>
+<section class="contact-wrap">
+  <div class="contact-inner">
+
+    <div class="contact-info">
+      <p class="eyebrow">Kontakt</p>
+      <h1>Schreib uns</h1>
+      <p class="lead">Fragen zu Produkten, Bestellungen oder Kooperationen? Wir antworten so schnell wie möglich.</p>
+
+    </div>
+
+    <form class="contact-form" action="#" method="POST" novalidate>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="vorname">Vorname *</label>
+          <input type="text" id="vorname" name="vorname" placeholder="Max" required minlength="2">
+          <span class="error">Bitte Vorname eingeben.</span>
+        </div>
+        <div class="form-group">
+          <label for="nachname">Nachname *</label>
+          <input type="text" id="nachname" name="nachname" placeholder="Muster" required minlength="2">
+          <span class="error">Bitte Nachname eingeben.</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-Mail *</label>
+        <input type="email" id="email" name="email" placeholder="max@beispiel.ch" required>
+        <span class="error">Bitte gültige E-Mail eingeben.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="betreff">Betreff *</label>
+        <select id="betreff" name="betreff" required>
+          <option value="">Bitte wählen</option>
+          <option value="produkt">Produktanfrage</option>
+          <option value="bestellung">Bestellung</option>
+          <option value="kooperation">Kooperation</option>
+          <option value="anderes">Anderes</option>
+        </select>
+        <span class="error">Bitte Betreff wählen.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="nachricht">Nachricht *</label>
+        <textarea id="nachricht" name="nachricht" rows="5" placeholder="Deine Nachricht..." required minlength="10"></textarea>
+        <span class="error">Bitte Nachricht eingeben (min. 10 Zeichen).</span>
+      </div>
+
+      <button type="submit" style="background: var(--color-seeblau); color: var(--color-weiss)" class="btn-primary">Nachricht senden</button>
+
+    </form>
+  </div>
+</section>
