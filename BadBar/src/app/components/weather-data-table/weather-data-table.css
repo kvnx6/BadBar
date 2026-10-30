@@ -1,0 +1,121 @@
+.weather-card {
+  max-width: 560px;
+  color: var(--color-black);
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.weather-header h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.4rem;
+}
+
+.weather-header p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.bathing-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1rem;
+  background: color-mix(in srgb, var(--color-sand) 35%, var(--color-weiss));
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 1.6rem;
+  height: 1.6rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.bathing-badge span:not(.status-dot) {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.bathing-badge strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.error {
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--color-koralle) 15%, var(--color-weiss));
+  color: var(--color-koralle);
+  font-size: 0.85rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  background: var(--color-weiss);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+thead th {
+  padding: 0.9rem;
+  background: var(--color-sand);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+tbody td {
+  padding: 0.85rem 0.9rem;
+  vertical-align: middle;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-sand) 60%, var(--color-weiss));
+}
+
+tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--color-sand) 12%, var(--color-weiss));
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody td:first-child {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+tbody td:nth-child(2) {
+  font-weight: 600;
+}
+
+tbody td:nth-child(3) {
+  font-size: 0.78rem;
+  opacity: 0.75;
+}
+
+@media (max-width: 480px) {
+  .weather-header {
+    flex-direction: column;
+  }
+}

@@ -3,7 +3,6 @@
   max-width: 1400px;
 }
 
-/* Slider */
 .slider {
   position: relative;
   overflow: hidden;
@@ -107,7 +106,7 @@
   font: inherit;
 }
 
-.error { color: #c0392b; font-weight: 400; }
+.error { color: var(--color-koralle); font-weight: 400; }
 .successMsg { color: #1e8449; }
 
 .btn {

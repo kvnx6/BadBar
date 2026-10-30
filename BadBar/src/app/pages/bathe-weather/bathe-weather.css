@@ -1,0 +1,25 @@
+.batheWeather {
+  margin: 0.5rem 2rem 0 2rem;
+}
+
+.batheWeather h1 {
+  margin-bottom: 0;
+}
+
+.mainConatainer {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.rating {
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .mainConatainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

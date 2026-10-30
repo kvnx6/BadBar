@@ -1,0 +1,62 @@
+<section class="weather-card">
+
+  <header class="weather-header">
+    <div>
+      <h2 style="margin-bottom: 0">{{ locationName() }}</h2>
+      <h3 style="padding: 0; margin: 0">{{ locationCounty() }}</h3>
+      <p>
+        <br>
+        Standort-Koordinaten:<br>
+        N, {{ coordinates().lat | number:'1.4-4' }}°
+        E, {{ coordinates().lng | number:'1.4-4' }}°
+      </p>
+    </div>
+
+    <div class="bathing-badge">
+      <span class="status-dot" [style.background]="ratingColors[badbarRating()!]"></span>
+      <div>
+        <span>Badeampel:</span>
+        <strong [style.color]="ratingColors[badbarRating()!]">{{ badbarRating() }}</strong>
+      </div>
+    </div>
+  </header>
+
+  @if (errorMessage()) {
+    <p class="error">{{ errorMessage() }}</p>
+  }
+  <div class="table-wrapper">
+    <table>
+      <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Gemessener Wert</th>
+      </tr>
+      </thead>
+
+      <tbody>
+        @if (weatherData(); as weather) {
+          @for (entry of (weather.current ?? {} | keyvalue); track entry.key) {
+            <tr>
+              <td>{{ entry.key }}</td>
+              <td>{{ entry.value }}</td>
+            </tr>
+          }
+        }
+
+        @if (marineData(); as marine) {
+          @for (entry of marine.current ?? {} | keyvalue; track entry.key) {
+            <tr>
+              <td>{{ entry.key }}</td>
+              @if (entry.value) {
+                <td>{{ entry.value }}</td>
+              } @else {
+                <td>drücke näher am Meer</td>
+              }
+            </tr>
+          }
+        }
+      </tbody>
+    </table>
+  </div>
+
+</section>

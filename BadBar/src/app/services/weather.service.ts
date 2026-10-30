@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { WeatherRequest, WeatherResponse } from '../models/weather-forecast';
 import { MarineRequest, MarineResponse } from '../models/marine-forecast';
+import { LocationAddress } from '../models/location';
 
 @Injectable({ providedIn: 'root' })
 export class WeatherService {
@@ -34,5 +35,13 @@ export class WeatherService {
     };
 
     return this.http.get<MarineResponse>(this.marineUrl, { params: request })
+  }
+
+  getLocationInfo(lat:number, lon:number) : Observable<LocationAddress> {
+    const locationUrl =
+      `https://nominatim.openstreetmap.org/reverse` +
+      `?lat=${lat}&lon=${lon}&format=jsonv2&accept-language=de`;
+
+    return this.http.get<LocationAddress>(locationUrl)
   }
 }

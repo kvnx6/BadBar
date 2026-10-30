@@ -1,1 +1,7 @@
-
+<section class="batheWeather">
+  <h1>Badewetter</h1>
+  <article class="mainConatainer">
+    <app-map (coordinatesEvent)="selectedCordinates.set($event)"></app-map>
+    <app-weather-data-table [coordinates]="selectedCordinates()"></app-weather-data-table>
+  </article>
+</section>
