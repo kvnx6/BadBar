@@ -38,10 +38,8 @@ export class WeatherService {
   }
 
   getLocationInfo(lat:number, lon:number) : Observable<LocationAddress> {
-    const locationUrl =
-      `https://nominatim.openstreetmap.org/reverse` +
-      `?lat=${lat}&lon=${lon}&format=jsonv2&accept-language=de`;
-
-    return this.http.get<LocationAddress>(locationUrl)
+    return this.http.get<LocationAddress>(
+      `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=de`,
+    );
   }
 }

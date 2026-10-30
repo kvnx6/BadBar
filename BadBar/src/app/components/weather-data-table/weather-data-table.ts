@@ -54,8 +54,8 @@ export class WeatherDataTable implements OnInit {
         this.marineData.set(mData);
       });
       this.service.getLocationInfo(latitude, longitude).subscribe((info) => {
-        this.locationName.set(info.address.country);
-        this.locationCounty.set(info.address.county);
+        this.locationName.set(info.countryName);
+        this.locationCounty.set(info.principalSubdivision);
       });
     } catch {
       this.errorMessage.set('Die Wetterdaten konnten nicht geladen werden.');
